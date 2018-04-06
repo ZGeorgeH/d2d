@@ -1,0 +1,56 @@
+DESCRIPTION
+"Model of MIP,r."
+"Assembled by Zhaozheng Hou"
+""
+ 
+ 
+PREDICTOR
+t           T       "min"     "time"      0       5040
+ 
+ 
+COMPARTMENTS
+ 
+         
+STATES
+Cit_mrna    C  A.U.   conc.(cit)  default   1  "mRNA"                  1
+Cit_foldedP C  A.U.   conc.(cit)  default   1  "Folded Protein"        1
+Cit_fluo    C  A.U.   conc.(cit)  default   1  "Fluorescent reporter"  1
+ 
+ 
+INPUTS
+IPTG        C    "uM"       "conc."     "step1(t,0,2160,1000)"
+ 
+ 
+ODES
+"alpha1+Vm1*(IPTG^h1/(Km1^h1+IPTG^h1))-d1*Cit_mrna"
+"alpha2*Cit_mrna-(d2+Kf)*Cit_foldedP"
+"Kf*Cit_foldedP-d2*Cit_fluo"
+ 
+ 
+DERIVED
+ 
+ 
+OBSERVABLES
+Fluorescence   F    "A.U."    "Fluo."   0   0    "Cit_fluo"
+ 
+ 
+ERRORS
+Fluorescence    "stdError"
+ 
+ 
+CONDITIONS
+init_Cit_mrna       "0"
+init_Cit_foldedP    "0"
+init_Cit_fluo       "0"
+ 
+ 
+PARAMETERS
+alpha1              0.016418633     1           0               3.88E-05    0.495
+Vm1                 0.291556643     1           0               3.88E-02    0.495
+h1                  1.717634878     1           0               0.5         4.9
+Km1                 5.143943349     1           0               2           10
+d1                  0.23            1           0               7.70E-03    0.23
+alpha2              6.637766586     1           0               0.2433      6.8067
+d2                  0.005751396     1           0               5.98E-05    0.2449
+Kf                  0.0217          1           0               0.012       0.0217
+stdError            0.5             0           0               0           100
