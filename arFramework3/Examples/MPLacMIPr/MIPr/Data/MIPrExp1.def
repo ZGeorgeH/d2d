@@ -1,0 +1,17 @@
+DESCRIPTION
+"test experiment of MIP,r."
+"Assembled by Zhaozheng Hou"
+
+PREDICTOR
+time        T   min time    0	350
+
+INPUTS
+
+OBSERVABLES
+Fluorescence   F    "A.U."    "Fluo."   0   0    "Cit_fluo"
+        
+ERRORS
+Fluorescence    "stdError"
+
+CONDITIONS
+stdError        "0.05"
