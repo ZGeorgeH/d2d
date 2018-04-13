@@ -8,6 +8,8 @@ arLoadData('MIPrExp1');
 ar.config.fiterrors = 1;
 arCompileAll;
 
+%interpolateLinear
+
 %set up the initial condition to the steady state of the network.
 model = 1;
 sourceCondition = 1;
