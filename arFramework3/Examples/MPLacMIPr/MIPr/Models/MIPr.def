@@ -5,7 +5,7 @@ DESCRIPTION
  
  
 PREDICTOR
-t           T       "min"     "time"      0       5040
+t           T       "min"     "time"      0       2880
  
  
 COMPARTMENTS
@@ -18,7 +18,7 @@ Cit_fluo    C  A.U.   conc.(cit)  default   1  "Fluorescent reporter"  1
  
  
 INPUTS
-IPTG        C    "uM"       "conc."     "step2(t,0,2160,10,3600,5)"
+IPTG        C    "uM"       "conc."     "10"
  
  
 ODES
@@ -39,18 +39,18 @@ Fluorescence    "stdError"
  
  
 CONDITIONS
-init_Cit_mrna       "0"
-init_Cit_foldedP    "0"
-init_Cit_fluo       "0"
-stdError            "0.05"
+init_Cit_mrna       "0.0713853623394525"
+init_Cit_foldedP    "17.2610297981842"
+init_Cit_fluo       "65.1258084678922"
+stdError            "0"
  
  
 PARAMETERS
-alpha1              0.016418633     1           0               3.88E-05    0.495
-Vm1                 0.291556643     1           0               3.88E-02    0.495
-h1                  1.717634878     1           0               0.5         4.9
-Km1                 5.143943349     1           0               2           10
-d1                  0.23            1           0               7.70E-03    0.23
-alpha2              6.637766586     1           0               0.2433      6.8067
-d2                  0.005751396     1           0               5.98E-05    0.2449
-Kf                  0.0217          1           0               0.012       0.0217
+alpha1              0.0164186333380725          1           0               3.88E-05    0.495
+Vm1                 0.291556643109224           1           0               3.88E-02    0.495
+h1                  1.71763487775568            1           0               0.5         4.9
+Km1                 5.14394334860864            1           0               2           10
+d1                  0.229999999999978           1           0               7.70E-03    0.23
+alpha2              6.63776658557266            1           0               0.2433      6.8067
+d2                  0.0057513964949778          1           0               5.98E-05    0.2449
+Kf                  0.0216999999961899          1           0               0.012       0.0217

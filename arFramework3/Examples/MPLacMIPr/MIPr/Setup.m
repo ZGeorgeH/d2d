@@ -2,7 +2,7 @@ close all; clear all; clc;
 % initialize full model
 arInit;
 arLoadModel('MIPr');
-arLoadData('MIPrExp1');
+%arLoadData('MIPrExp1');
 
 %the error model is used and estimated together with the dynamics
 ar.config.fiterrors = 1;
@@ -14,7 +14,7 @@ arCompileAll;
 model = 1;
 sourceCondition = 1;
 targetCondition = [1];
-arSteadyState(model, sourceCondition, targetCondition, -1e7);
+%arSteadyState(model, sourceCondition, targetCondition, -1e7);
 
 % IPTG[next]=1*IPTG+500
 %arAddEvent(1, 1, 300,'Cit_fluo',1,500);
@@ -29,6 +29,9 @@ arPlot;
 arPrint;
 
 
+        
+%arPrint;
+
 %identifiability test
-arIdentifiablityTest(false,0.5,100,true);
+arIdentifiablityTest(false,0.5,10,true);
 return;
