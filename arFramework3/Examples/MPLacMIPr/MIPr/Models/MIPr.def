@@ -5,7 +5,7 @@ DESCRIPTION
  
  
 PREDICTOR
-t           T       "min"     "time"      0       2880
+t           T       "min"     "time"      0       3000
  
  
 COMPARTMENTS
@@ -18,8 +18,8 @@ Cit_fluo    C  A.U.   conc.(cit)  default   1  "Fluorescent reporter"  1
  
  
 INPUTS
-IPTG        C    "uM"       "conc."     "10"
- 
+IPTG        C    "uM"       "conc."     "0"
+
  
 ODES
 "alpha1+Vm1*(IPTG^h1/(Km1^h1+IPTG^h1))-d1*Cit_mrna"
@@ -35,15 +35,13 @@ Fluorescence   F    "A.U."    "Fluo."   0   0    "Cit_fluo"
  
  
 ERRORS
-Fluorescence    "stdError"
+Fluorescence    "0.05"
  
  
 CONDITIONS
 init_Cit_mrna       "0.0713853623394525"
 init_Cit_foldedP    "17.2610297981842"
 init_Cit_fluo       "65.1258084678922"
-stdError            "0"
- 
  
 PARAMETERS
 alpha1              0.0164186333380725          1           0               3.88E-05    0.495
