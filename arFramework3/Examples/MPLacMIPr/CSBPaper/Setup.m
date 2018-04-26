@@ -1,8 +1,8 @@
 close all; clear all; clc;
 % initialize full model
 arInit;
-arLoadModel('MIPr');
-%arLoadData('MIPrExp1');
+arLoadModel('MIPrmod');
+%arLoadData('MIPrExp1','MIPr');
 
 %the error model is used and estimated together with the dynamics
 ar.config.fiterrors = 1;
@@ -27,11 +27,8 @@ arPlot;
 
 %print out the values of the parameters
 arPrint;
-return;
 
-        
-%arPrint;
 
 %identifiability test
-arIdentifiablityTest(false,0.5,10,true);
+%arIdentifiablityTest(false,0.5,10,true);
 return;

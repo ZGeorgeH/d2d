@@ -28,11 +28,11 @@ ODES
  
  
 DERIVED
- 
- 
+
+
+
 OBSERVABLES
 Fluorescence   F    "A.U."    "Fluo."   0   0    "Cit_AU"
- 
  
 ERRORS
 Fluorescence        "0.05"
@@ -43,16 +43,60 @@ init_Cit_mrna       "0.0713853623394525"
 init_Cit_foldedP    "17.2610297981842"
 init_Cit_fluo       "65.1258084678922"
 init_Cit_AU         "2.32592173099615"
-index               "min(max(1,2),3)"
-
+index               "1"
+alpha1       "guess_alpha1+var_alpha1*sigma_alpha1"
+Vm1          "guess_Vm1+var_Vm1*sigma_Vm1"
+h1           "guess_h1+var_h1*sigma_h1"
+Km1          "guess_Km1+var_Km1*sigma_Km1"
+d1           "guess_d1+var_d1*sigma_d1"
+alpha2       "guess_alpha2+var_alpha2*sigma_alpha2"
+d2           "guess_d2+var_d2*sigma_d2"
+Kf           "guess_Kf+var_Kf*sigma_Kf"
+sc_molec     "guess_sc_molec+var_sc_molec*sigma_sc_molec"
+guess_alpha1    "0.0164186333380725"
+guess_Vm1       "0.291556643109224"
+guess_h1        "1.71763487775568"
+guess_Km1       "5.14394334860864"
+guess_d1        "0.229999999999978"
+guess_alpha2    "6.63776658557266"
+guess_d2        "0.0057513964949778"
+guess_Kf        "0.0216999999961899"
+guess_sc_molec  "28"
+sigma_alpha1    "1"
+sigma_Vm1       "1"
+sigma_h1        "1"
+sigma_Km1       "1"
+sigma_d1        "1"
+sigma_alpha2    "1"
+sigma_d2        "1"
+sigma_Kf        "1"
+sigma_sc_molec  "1"
+min_alpha1      "0.0000388"
+min_Vm1         "0.0388"
+min_h1          "0.5"
+min_Km1         "2"
+min_d1          "0.0077"
+min_alpha2      "0.2433"
+min_d2          "0.0000598"
+min_Kf          "0.012"
+min_sc_molec    "10"
+max_alpha1      "0.495"
+max_Vm1         "0.495"
+max_h1          "4.9"
+max_Km1         "10"
+max_d1          "0.23"
+max_alpha2      "6.8067"
+max_d2          "0.2449"
+max_Kf          "0.0217"
+max_sc_molec    "1000"
 
 PARAMETERS
-alpha1              0.0164186333380725          1           0               3.88E-05    0.495
-Vm1                 0.291556643109224           1           0               3.88E-02    0.495
-h1                  1.71763487775568            1           0               0.5         4.9
-Km1                 5.14394334860864            1           0               2           10
-d1                  0.229999999999978           1           0               7.70E-03    0.23
-alpha2              6.63776658557266            1           0               0.2433      6.8067
-d2                  0.0057513964949778          1           0               5.98E-05    0.2449
-Kf                  0.0216999999961899          1           0               0.012       0.0217
-sc_molec            28                          1           0               10           1000
+var_alpha1      0        1        0        -1        1
+var_Vm1         0        1        0        -1        1
+var_h1          0        1        0        -1        1
+var_Km1         0        1        0        -1        1
+var_d1          0        1        0        -1        1
+var_alpha2      0        1        0        -1        1
+var_d2          0        1        0        -1        1
+var_Kf          0        1        0        -1        1
+var_sc_molec    0        1        0        -1        1

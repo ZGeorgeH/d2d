@@ -3,15 +3,14 @@ DESCRIPTION
 "Assembled by Zhaozheng Hou"
 
 PREDICTOR
-time        T   min time    0	350
+time        T   min time    0	3000
 
 INPUTS
 
 OBSERVABLES
-Fluorescence   F    "A.U."    "Fluo."   0   0    "Cit_fluo"
+Fluorescence   F    "A.U."    "Fluo."   0   0    "Cit_AU"
         
 ERRORS
-Fluorescence    "stdError"
+Fluorescence    "0.05"
 
 CONDITIONS
-stdError        "0.05"
